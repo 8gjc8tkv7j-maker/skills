@@ -37,7 +37,8 @@ Don't fake results.
 ## Workflow
 
 Run commands from the skill folder (or give the full path to `scripts/tvctl.py`). Backups go to
-`./tv-backups/` in the current directory; pass `--dir` to change it.
+`./tv-backups/` in the current directory; pass `--dir` to change it. On Windows the Python command is
+usually `py` rather than `python3`; tvctl also finds adb in `C:\platform-tools` when it isn't on PATH.
 
 ### 1. Find and connect
 

@@ -41,6 +41,8 @@ python3 scripts/tvctl.py tweaks               # optional: faster animations, ad-
 python3 scripts/tvctl.py home setup           # install TV Home, choose the dock, make it home
 ```
 
+On Windows, type `py` instead of `python3` (e.g. `py scripts\tvctl.py discover`).
+
 With Claude Code on that computer, just ask: *"debloat my Android TV and give it the TV Home launcher"*.
 The skill in `SKILL.md` does the same steps, asks you in chat and reads every screenshot.
 
