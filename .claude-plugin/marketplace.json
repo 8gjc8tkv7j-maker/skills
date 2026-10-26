@@ -68,6 +68,15 @@
       "skills": [
         "./skills/discernment-nudge"
       ]
+    },
+    {
+      "name": "android-tv",
+      "description": "Debloat an Android TV over ADB (reversibly) and give it TV Home, an Apple TV-style launcher with a dock and nature wallpapers",
+      "source": "./",
+      "strict": false,
+      "skills": [
+        "./skills/android-tv-debloat"
+      ]
     }
   ]
 }

@@ -1,0 +1,574 @@
+{
+  "version": 1,
+  "about": "Known preinstalled Android TV packages. Groups: ads/telemetry are offered together (one confirmation); app/feature are asked one by one, default keep; launcher is only touched by `tvctl.py home` after TV Home is verified. Packages are only ever disabled for user 0 (pm disable-user), never uninstalled. Sources: Universal Android Debloater list, community TV guides, and package behaviour; always confirm on the actual TV.",
+  "protected": [
+    "android",
+    "com.android.bluetooth",
+    "com.android.certinstaller",
+    "com.android.externalstorage",
+    "com.android.inputdevices",
+    "com.android.keychain",
+    "com.android.location.fused",
+    "com.android.media.tv.remoteprovider",
+    "com.android.packageinstaller",
+    "com.android.permissioncontroller",
+    "com.android.phone",
+    "com.android.settings",
+    "com.android.shell",
+    "com.android.systemui",
+    "com.android.tv",
+    "com.android.tv.frameworkpackagestubs",
+    "com.android.tv.settings",
+    "com.android.vending",
+    "com.android.webview",
+    "com.dolby.android.audio.service",
+    "com.google.android.ext.services",
+    "com.google.android.gms",
+    "com.google.android.gsf",
+    "com.google.android.leanback.ime",
+    "com.google.android.packageinstaller",
+    "com.google.android.permissioncontroller",
+    "com.google.android.tv",
+    "com.google.android.tv.axel",
+    "com.google.android.tv.dfuservice",
+    "com.google.android.tv.frameworkpackagestubs",
+    "com.google.android.tv.remotecontrol.logging",
+    "com.google.android.webview",
+    "com.homwee.dmt.upgrade",
+    "com.homwee.dynamicbacklight",
+    "com.homwee.factory",
+    "com.homwee.overlay.tvservice",
+    "com.homwee.synckey",
+    "com.homwee.upgrade",
+    "com.sony.dtv.ecodashboard",
+    "com.sony.dtv.tvx",
+    "com.tcl.autopair",
+    "com.tcl.framework.custom",
+    "com.tcl.initsetup",
+    "com.tcl.suspension",
+    "com.tcl.tcl_bt_rcu_service",
+    "com.tcl.ttvs",
+    "com.tcl.tv",
+    "com.tcl.tvinput",
+    "com.xiaomi.mitv.res",
+    "dev.tvhome"
+  ],
+  "protected_prefixes": [
+    "android.",
+    "com.amlogic.",
+    "com.android.inputmethod",
+    "com.android.networkstack",
+    "com.android.providers.",
+    "com.android.server.",
+    "com.android.wifi",
+    "com.dolby.",
+    "com.google.android.gms.",
+    "com.google.android.inputmethod",
+    "com.google.android.overlay",
+    "com.mediatek.",
+    "com.mstar.",
+    "com.qualcomm.",
+    "com.realtek.",
+    "org.droidtv.",
+    "vendor."
+  ],
+  "oem_prefixes": [
+    "com.changhong.",
+    "com.hisense.",
+    "com.homwee.",
+    "com.konka.",
+    "com.mitv.",
+    "com.miui.",
+    "com.nvidia.",
+    "com.onn.",
+    "com.panasonic.",
+    "com.philips.",
+    "com.sharp.",
+    "com.skyworth.",
+    "com.sony.",
+    "com.tcl.",
+    "com.toshiba.",
+    "com.tpv.",
+    "com.vewd.",
+    "com.walmart.",
+    "com.xiaomi.",
+    "com.zeasn.",
+    "tv.alphonso.",
+    "tv.samba."
+  ],
+  "suspicious_words": [
+    "acr",
+    "ads",
+    "advert",
+    "alphonso",
+    "analytics",
+    "bugreport",
+    "feedback",
+    "logger",
+    "promo",
+    "recommend",
+    "samba",
+    "stats",
+    "telemetry",
+    "tracking"
+  ],
+  "packages": {
+    "com.google.android.leanbacklauncher.recommendations": {
+      "label": "Android TV Home recommendations",
+      "group": "ads",
+      "brand": "google",
+      "what": "Feeds sponsored and suggested rows to the old Android TV home screen.",
+      "breaks": "Nothing you need once TV Home is your home screen."
+    },
+    "com.google.android.tvrecommendations": {
+      "label": "Android TV Core Services (recommendations)",
+      "group": "ads",
+      "brand": "google",
+      "ask": true,
+      "what": "Supplies recommendation and 'sponsored' rows to the stock home screen.",
+      "breaks": "Recommendation rows on the stock home screen. Rated 'expert' by UAD because it does more on some TVs: disable, then check Live TV and inputs still work."
+    },
+    "com.google.android.feedback": {
+      "label": "Google Feedback",
+      "group": "telemetry",
+      "brand": "google",
+      "what": "Sends crash reports and feedback to Google.",
+      "breaks": "The 'send feedback' option on crash dialogs."
+    },
+    "com.google.android.tv.bugreportsender": {
+      "label": "Bug report sender",
+      "group": "telemetry",
+      "brand": "google",
+      "what": "Uploads bug reports.",
+      "breaks": "Nothing for everyday use."
+    },
+    "com.google.android.apps.tv.netoscope": {
+      "label": "Connectivity diagnostics",
+      "group": "telemetry",
+      "brand": "google",
+      "what": "Background network and time diagnostics.",
+      "breaks": "The network diagnostics screen in Settings, if your TV has one."
+    },
+    "com.google.android.youtube.tv": {
+      "label": "YouTube",
+      "group": "app",
+      "brand": "google",
+      "what": "The YouTube app.",
+      "breaks": "YouTube and the YouTube button on the remote."
+    },
+    "com.google.android.youtube.tvmusic": {
+      "label": "YouTube Music",
+      "group": "app",
+      "brand": "google",
+      "what": "The YouTube Music app.",
+      "breaks": "YouTube Music."
+    },
+    "com.google.android.videos": {
+      "label": "Google TV / Play Movies",
+      "group": "app",
+      "brand": "google",
+      "what": "Google's film and TV store and watchlist app.",
+      "breaks": "Films you bought from Google."
+    },
+    "com.google.android.play.games": {
+      "label": "Google Play Games",
+      "group": "app",
+      "brand": "google",
+      "what": "Play Games hub.",
+      "breaks": "Cloud saves and achievements in some games."
+    },
+    "com.google.android.katniss": {
+      "label": "Google app (voice search & Assistant)",
+      "group": "feature",
+      "brand": "google",
+      "what": "Voice search, Google Assistant and the search screen.",
+      "breaks": "The microphone button on the remote and voice search."
+    },
+    "com.google.android.apps.mediashell": {
+      "label": "Chromecast built-in",
+      "group": "feature",
+      "brand": "google",
+      "what": "Lets you cast from your phone to the TV.",
+      "breaks": "Casting from phone apps (the Cast button)."
+    },
+    "com.google.android.tv.remote.service": {
+      "label": "Android TV Remote Service",
+      "group": "feature",
+      "brand": "google",
+      "what": "Lets the Google TV app on your phone act as a remote.",
+      "breaks": "Using your phone as a remote."
+    },
+    "com.google.android.backdrop": {
+      "label": "Backdrop screensaver",
+      "group": "feature",
+      "brand": "google",
+      "what": "The photo screensaver on Android TV.",
+      "breaks": "That screensaver (the basic one still works)."
+    },
+    "com.google.android.apps.tv.dreamx": {
+      "label": "Ambient mode",
+      "group": "feature",
+      "brand": "google",
+      "what": "Google TV's screensaver, which also shows suggestions.",
+      "breaks": "The Google TV screensaver."
+    },
+    "com.netflix.ninja": {
+      "label": "Netflix",
+      "group": "app",
+      "brand": "any",
+      "what": "The Netflix app.",
+      "breaks": "Netflix and the Netflix button on the remote."
+    },
+    "com.amazon.amazonvideo.livingroom": {
+      "label": "Prime Video",
+      "group": "app",
+      "brand": "any",
+      "what": "Amazon Prime Video.",
+      "breaks": "Prime Video and its remote button."
+    },
+    "com.disney.disneyplus": {
+      "label": "Disney+",
+      "group": "app",
+      "brand": "any",
+      "what": "Disney+.",
+      "breaks": "Disney+ and its remote button."
+    },
+    "com.spotify.tv.android": {
+      "label": "Spotify",
+      "group": "app",
+      "brand": "any",
+      "what": "Spotify.",
+      "breaks": "Spotify."
+    },
+    "tv.pluto.android": {
+      "label": "Pluto TV",
+      "group": "app",
+      "brand": "any",
+      "what": "Free ad-supported channels.",
+      "breaks": "Pluto TV."
+    },
+    "com.tubitv": {
+      "label": "Tubi",
+      "group": "app",
+      "brand": "any",
+      "what": "Free ad-supported films.",
+      "breaks": "Tubi."
+    },
+    "tv.alphonso.alphonso_eula": {
+      "label": "Alphonso viewing data (ACR)",
+      "group": "telemetry",
+      "brand": "any",
+      "what": "Automatic content recognition: reports what you watch for advertising.",
+      "breaks": "Nothing you would notice."
+    },
+    "com.tcl.overseasappshow": {
+      "label": "TCL app promotions",
+      "group": "ads",
+      "brand": "tcl",
+      "what": "Shows promoted apps and ads.",
+      "breaks": "Nothing you need."
+    },
+    "com.tcl.bootadservice": {
+      "label": "TCL boot ads",
+      "group": "ads",
+      "brand": "tcl",
+      "what": "Ads shown while the TV starts.",
+      "breaks": "Nothing you need."
+    },
+    "com.tcl.messagebox": {
+      "label": "TCL message box",
+      "group": "ads",
+      "brand": "tcl",
+      "what": "TCL promotional messages and notices.",
+      "breaks": "TCL's own messages."
+    },
+    "com.tcl.tvweishi": {
+      "label": "TCL TV guard overlay",
+      "group": "telemetry",
+      "brand": "tcl",
+      "what": "Companion overlay of TCL Guard.",
+      "breaks": "Nothing you need."
+    },
+    "com.tcl.guard": {
+      "label": "TCL Guard (cleaner/antivirus)",
+      "group": "telemetry",
+      "brand": "tcl",
+      "ask": true,
+      "what": "Background 'cleaner' that runs all the time and phones home.",
+      "breaks": "TCL's memory cleaner. Rated 'expert' by UAD: disable, then reboot and check the TV still starts normally."
+    },
+    "com.tcl.gallery": {
+      "label": "TCL Gallery",
+      "group": "app",
+      "brand": "tcl",
+      "what": "Photo viewer for USB drives.",
+      "breaks": "Viewing photos from USB with TCL's viewer."
+    },
+    "com.tcl.videoplayer": {
+      "label": "TCL Video Player",
+      "group": "app",
+      "brand": "tcl",
+      "what": "Plays video files from USB drives.",
+      "breaks": "Playing USB videos with TCL's player."
+    },
+    "com.tcl.notereminder": {
+      "label": "TCL Notes & Reminders",
+      "group": "app",
+      "brand": "tcl",
+      "what": "Reminders app.",
+      "breaks": "TCL reminders."
+    },
+    "com.tcl.browser": {
+      "label": "TCL Browser",
+      "group": "app",
+      "brand": "tcl",
+      "what": "Web browser.",
+      "breaks": "Apps that open web pages in the TCL browser."
+    },
+    "com.tcl.appmarket2": {
+      "label": "TCL App Market",
+      "group": "app",
+      "brand": "tcl",
+      "what": "TCL's own app store.",
+      "breaks": "TCL's app store (Google Play is unaffected)."
+    },
+    "com.tcl.usercenter": {
+      "label": "TCL account",
+      "group": "app",
+      "brand": "tcl",
+      "what": "TCL account and member centre.",
+      "breaks": "TCL account features."
+    },
+    "com.tcl.esticker": {
+      "label": "TCL Stickers",
+      "group": "app",
+      "brand": "tcl",
+      "what": "On-screen sticker notes.",
+      "breaks": "TCL stickers."
+    },
+    "com.tcl.pvr.pvrplayer": {
+      "label": "TCL recordings player",
+      "group": "feature",
+      "brand": "tcl",
+      "what": "Plays TV programmes recorded to USB.",
+      "breaks": "Watching your recordings."
+    },
+    "com.sony.dtv.promos": {
+      "label": "Sony promotions",
+      "group": "ads",
+      "brand": "sony",
+      "what": "Sony offers and promotions.",
+      "breaks": "Nothing you need."
+    },
+    "com.sony.dtv.sonyselect": {
+      "label": "Sony Select",
+      "group": "ads",
+      "brand": "sony",
+      "what": "Promoted subscription services and apps.",
+      "breaks": "Nothing you need; use Google Play."
+    },
+    "com.sony.dtv.notificationcenter": {
+      "label": "Sony promo notifications",
+      "group": "ads",
+      "brand": "sony",
+      "what": "Reminds you to use Sony's apps.",
+      "breaks": "Nothing; other notifications keep working."
+    },
+    "com.sony.nfx.app.sfrc": {
+      "label": "Sony recommendations",
+      "group": "ads",
+      "brand": "sony",
+      "what": "Sony's content recommendations.",
+      "breaks": "Sony suggestion rows."
+    },
+    "com.sony.dtv.smarthelp": {
+      "label": "Sony Help guide",
+      "group": "app",
+      "brand": "sony",
+      "what": "On-screen manual.",
+      "breaks": "The built-in help guide."
+    },
+    "com.sony.dtv.livingfit": {
+      "label": "Sony Living Decor",
+      "group": "app",
+      "brand": "sony",
+      "what": "Turns the TV into a picture frame.",
+      "breaks": "That picture-frame mode (not the screensaver)."
+    },
+    "com.sony.dtv.osat.music": {
+      "label": "Sony Music player",
+      "group": "app",
+      "brand": "sony",
+      "what": "Plays music files.",
+      "breaks": "Playing music files with Sony's player."
+    },
+    "com.sony.dtv.recapp": {
+      "label": "Sony reminders",
+      "group": "app",
+      "brand": "sony",
+      "what": "Lists reminders and timers.",
+      "breaks": "Viewing reminders."
+    },
+    "com.sony.dtv.timers": {
+      "label": "Sony timers & clock",
+      "group": "app",
+      "brand": "sony",
+      "what": "Sleep and on/off timers.",
+      "breaks": "The Timer button on some remotes."
+    },
+    "com.sony.dtv.seeds.iot": {
+      "label": "Sony smart-speaker control",
+      "group": "feature",
+      "brand": "sony",
+      "what": "Control the TV from Alexa and other smart speakers.",
+      "breaks": "Smart speaker control."
+    },
+    "com.sony.dtv.calibrationmonitor": {
+      "label": "Calman for BRAVIA",
+      "group": "app",
+      "brand": "sony",
+      "what": "Picture calibration.",
+      "breaks": "Calibration with Calman."
+    },
+    "com.vewd.core.integration.dia": {
+      "label": "Vewd browser",
+      "group": "app",
+      "brand": "sony",
+      "what": "Web browser some apps use to open links.",
+      "breaks": "Opening web links from apps."
+    },
+    "com.miui.tv.analytics": {
+      "label": "Xiaomi analytics",
+      "group": "telemetry",
+      "brand": "xiaomi",
+      "what": "Usage analytics.",
+      "breaks": "Nothing you would notice."
+    },
+    "com.mitv.tvhome.michannel": {
+      "label": "Mi Channel",
+      "group": "app",
+      "brand": "xiaomi",
+      "what": "Xiaomi's content channels.",
+      "breaks": "Mi Channel."
+    },
+    "com.mitv.videoplayer": {
+      "label": "Mi Video Player",
+      "group": "app",
+      "brand": "xiaomi",
+      "what": "Video player with ads.",
+      "breaks": "Playing local videos with Xiaomi's player."
+    },
+    "com.mitv.milinkservice": {
+      "label": "Mi screen casting",
+      "group": "feature",
+      "brand": "xiaomi",
+      "what": "Screen mirroring from Xiaomi phones.",
+      "breaks": "Mirroring from Xiaomi phones."
+    },
+    "com.nvidia.stats": {
+      "label": "NVIDIA usage stats",
+      "group": "telemetry",
+      "brand": "nvidia",
+      "what": "Usage statistics.",
+      "breaks": "Nothing you would notice."
+    },
+    "com.nvidia.enhancedlogging": {
+      "label": "NVIDIA enhanced logging",
+      "group": "telemetry",
+      "brand": "nvidia",
+      "what": "Extra diagnostics logging.",
+      "breaks": "Nothing you would notice."
+    },
+    "com.nvidia.feedback": {
+      "label": "NVIDIA feedback",
+      "group": "telemetry",
+      "brand": "nvidia",
+      "what": "Sends feedback reports.",
+      "breaks": "Sending feedback to NVIDIA."
+    },
+    "com.nvidia.tegrazone3": {
+      "label": "NVIDIA Games",
+      "group": "app",
+      "brand": "nvidia",
+      "what": "GeForce NOW and NVIDIA game hub.",
+      "breaks": "NVIDIA Games."
+    },
+    "com.google.android.apps.tv.launcherx": {
+      "label": "Google TV home screen",
+      "group": "launcher",
+      "brand": "google",
+      "what": "The stock Google TV home screen, with its ads and suggestions.",
+      "breaks": "The Google TV home screen (TV Home replaces it). On some remotes the YouTube button stops working."
+    },
+    "com.google.android.tungsten.setupwraith": {
+      "label": "Google TV setup",
+      "group": "launcher",
+      "brand": "google",
+      "what": "First-time setup; takes over as home screen when the Google TV home is disabled.",
+      "breaks": "Re-running setup. Reported to break volume control on some Sony TVs when removed, so only disable it if TV Home doesn't stick."
+    },
+    "com.google.android.tvlauncher": {
+      "label": "Android TV home screen",
+      "group": "launcher",
+      "brand": "google",
+      "what": "The stock Android TV home screen.",
+      "breaks": "The stock home screen (TV Home replaces it)."
+    },
+    "com.google.android.leanbacklauncher": {
+      "label": "Android TV home screen (old)",
+      "group": "launcher",
+      "brand": "google",
+      "what": "The older stock Android TV home screen.",
+      "breaks": "The stock home screen (TV Home replaces it)."
+    },
+    "com.mitv.tvhome.atv": {
+      "label": "PatchWall",
+      "group": "launcher",
+      "brand": "xiaomi",
+      "what": "Xiaomi's home screen.",
+      "breaks": "PatchWall (TV Home replaces it)."
+    },
+    "com.homwee.store": {
+      "label": "Changhong app store",
+      "group": "app",
+      "brand": "changhong",
+      "what": "Changhong/Homwee's own app store, which promotes apps.",
+      "breaks": "That store (Google Play is unaffected)."
+    },
+    "com.homwee.help": {
+      "label": "Changhong help",
+      "group": "app",
+      "brand": "changhong",
+      "what": "On-screen help and manual.",
+      "breaks": "The built-in help pages."
+    },
+    "com.homwee.mmp.fileexplorer": {
+      "label": "Changhong file explorer",
+      "group": "app",
+      "brand": "changhong",
+      "what": "Browses files on USB drives.",
+      "breaks": "Browsing USB drives with Changhong's explorer."
+    },
+    "com.homwee.mmp.imageplayer": {
+      "label": "Changhong photo viewer",
+      "group": "app",
+      "brand": "changhong",
+      "what": "Shows photos from USB drives.",
+      "breaks": "Viewing USB photos with Changhong's viewer."
+    },
+    "com.homwee.multiscreenshare": {
+      "label": "Changhong screen mirroring",
+      "group": "feature",
+      "brand": "changhong",
+      "what": "Mirrors a phone or laptop screen to the TV (name-based; confirm on the TV).",
+      "breaks": "Screen mirroring from phones (Chromecast casting is separate)."
+    },
+    "com.homwee.mmp.screenshare": {
+      "label": "Changhong media sharing",
+      "group": "feature",
+      "brand": "changhong",
+      "what": "Plays photos and videos sent from phones on the network (name-based; confirm on the TV).",
+      "breaks": "Sending media from phones with that feature."
+    }
+  }
+}
